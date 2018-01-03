@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MBMiniPlayerView" customModule="MyBarMusic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVs-10-aT8" userLabel="Button 1">
+                    <rect key="frame" x="229" y="0.0" width="73" height="73"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="rVs-10-aT8" secondAttribute="height" multiplier="1:1" id="VeY-bw-JVA"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9w-Qc-zow" userLabel="Button 2">
+                    <rect key="frame" x="302" y="0.0" width="73" height="73"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Y9w-Qc-zow" secondAttribute="height" multiplier="1:1" id="jBN-hb-b0s"/>
+                    </constraints>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Y9w-Qc-zow" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="4ic-IU-nYK"/>
+                <constraint firstItem="Y9w-Qc-zow" firstAttribute="width" secondItem="rVs-10-aT8" secondAttribute="width" id="BHb-NZ-c6h"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y9w-Qc-zow" secondAttribute="bottom" id="BiP-fT-Vzb"/>
+                <constraint firstItem="Y9w-Qc-zow" firstAttribute="height" secondItem="rVs-10-aT8" secondAttribute="height" id="F1Z-en-fRh"/>
+                <constraint firstItem="Y9w-Qc-zow" firstAttribute="centerY" secondItem="rVs-10-aT8" secondAttribute="centerY" id="WBQ-WF-gvS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Y9w-Qc-zow" secondAttribute="trailing" id="Ypc-KN-le0"/>
+                <constraint firstItem="rVs-10-aT8" firstAttribute="trailing" secondItem="Y9w-Qc-zow" secondAttribute="leading" id="a3M-db-iwk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-37.5" y="3.5"/>
+        </view>
+    </objects>
+</document>
