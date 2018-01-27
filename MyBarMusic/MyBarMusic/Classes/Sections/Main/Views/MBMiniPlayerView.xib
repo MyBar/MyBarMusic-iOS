@@ -11,38 +11,69 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MBMiniPlayerView" customModule="MyBarMusic" customModuleProvider="target">
+            <connections>
+                <outlet property="albumCoverScrollView" destination="MPw-16-DeD" id="Mk7-DS-KAh"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="vi6-qN-4ry"/>
+                <outlet property="nonePlaylistLabel" destination="4R2-P7-YtQ" id="PL2-ZR-uRC"/>
+                <outlet property="playButton" destination="rVs-10-aT8" id="By6-vI-7o9"/>
+                <outlet property="playlistButton" destination="Y9w-Qc-zow" id="lQ1-NJ-7JF"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MBMiniPlayerView" customModule="MyBarMusic" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVs-10-aT8" userLabel="Button 1">
-                    <rect key="frame" x="229" y="0.0" width="73" height="73"/>
+                    <rect key="frame" x="235" y="0.0" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="rVs-10-aT8" secondAttribute="height" multiplier="1:1" id="VeY-bw-JVA"/>
                     </constraints>
+                    <state key="normal" image="miniplayer_btn_play_disable"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9w-Qc-zow" userLabel="Button 2">
-                    <rect key="frame" x="302" y="0.0" width="73" height="73"/>
+                    <rect key="frame" x="305" y="0.0" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Y9w-Qc-zow" secondAttribute="height" multiplier="1:1" id="jBN-hb-b0s"/>
                     </constraints>
+                    <state key="normal" image="miniplayer_btn_playlist_disable"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QQ音乐，听我想听的歌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4R2-P7-YtQ">
+                    <rect key="frame" x="16" y="0.0" width="219" height="70"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPw-16-DeD">
+                    <rect key="frame" x="0.0" y="0.0" width="235" height="70"/>
+                </scrollView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.93154761904761907" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Y9w-Qc-zow" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="4ic-IU-nYK"/>
                 <constraint firstItem="Y9w-Qc-zow" firstAttribute="width" secondItem="rVs-10-aT8" secondAttribute="width" id="BHb-NZ-c6h"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y9w-Qc-zow" secondAttribute="bottom" id="BiP-fT-Vzb"/>
                 <constraint firstItem="Y9w-Qc-zow" firstAttribute="height" secondItem="rVs-10-aT8" secondAttribute="height" id="F1Z-en-fRh"/>
+                <constraint firstItem="rVs-10-aT8" firstAttribute="leading" secondItem="4R2-P7-YtQ" secondAttribute="trailing" id="GBu-yV-jbm"/>
                 <constraint firstItem="Y9w-Qc-zow" firstAttribute="centerY" secondItem="rVs-10-aT8" secondAttribute="centerY" id="WBQ-WF-gvS"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Y9w-Qc-zow" secondAttribute="trailing" id="Ypc-KN-le0"/>
+                <constraint firstItem="MPw-16-DeD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZPF-r3-ZzE"/>
                 <constraint firstItem="rVs-10-aT8" firstAttribute="trailing" secondItem="Y9w-Qc-zow" secondAttribute="leading" id="a3M-db-iwk"/>
+                <constraint firstItem="MPw-16-DeD" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="aN8-i1-077"/>
+                <constraint firstItem="rVs-10-aT8" firstAttribute="leading" secondItem="MPw-16-DeD" secondAttribute="trailing" id="bRq-yC-uNf"/>
+                <constraint firstItem="4R2-P7-YtQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="eXq-Ya-DLS"/>
+                <constraint firstItem="4R2-P7-YtQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="jYb-qI-vU5"/>
+                <constraint firstItem="MPw-16-DeD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="nb2-EE-2vV"/>
+                <constraint firstItem="4R2-P7-YtQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="qq6-Xd-LYx"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-37.5" y="3.5"/>
+            <point key="canvasLocation" x="-37.5" y="5"/>
         </view>
     </objects>
+    <resources>
+        <image name="miniplayer_btn_play_disable" width="36" height="36"/>
+        <image name="miniplayer_btn_playlist_disable" width="40" height="40"/>
+    </resources>
 </document>

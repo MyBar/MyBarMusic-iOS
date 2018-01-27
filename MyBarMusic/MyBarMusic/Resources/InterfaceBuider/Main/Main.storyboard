@@ -64,10 +64,47 @@
                     <view key="view" contentMode="scaleToFill" id="WMn-WZ-JJW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccf-hJ-ToU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.14715226009999999" blue="0.15876712139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="56e-Gq-Tvb"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWb-Uv-nj6">
+                                <rect key="frame" x="0.0" y="108" width="375" height="499"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3O-bL-qJR">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.14715226009999999" blue="0.15876712139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="zB1-cx-IUK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ccf-hJ-ToU" firstAttribute="top" secondItem="rPi-1g-AzO" secondAttribute="top" id="6Dj-A9-nAs"/>
+                            <constraint firstItem="ccf-hJ-ToU" firstAttribute="leading" secondItem="rPi-1g-AzO" secondAttribute="leading" id="HVY-wp-hLR"/>
+                            <constraint firstItem="NWb-Uv-nj6" firstAttribute="leading" secondItem="rPi-1g-AzO" secondAttribute="leading" id="KBa-ev-qlt"/>
+                            <constraint firstItem="r3O-bL-qJR" firstAttribute="top" secondItem="NWb-Uv-nj6" secondAttribute="bottom" id="RhZ-bX-0bV"/>
+                            <constraint firstItem="r3O-bL-qJR" firstAttribute="bottom" secondItem="rPi-1g-AzO" secondAttribute="bottom" id="WUi-bW-IxM"/>
+                            <constraint firstItem="ccf-hJ-ToU" firstAttribute="trailing" secondItem="rPi-1g-AzO" secondAttribute="trailing" id="cla-Ko-9zE"/>
+                            <constraint firstItem="NWb-Uv-nj6" firstAttribute="trailing" secondItem="rPi-1g-AzO" secondAttribute="trailing" id="fHE-y3-SUI"/>
+                            <constraint firstItem="r3O-bL-qJR" firstAttribute="trailing" secondItem="rPi-1g-AzO" secondAttribute="trailing" id="hBy-Kz-o9x"/>
+                            <constraint firstItem="r3O-bL-qJR" firstAttribute="leading" secondItem="rPi-1g-AzO" secondAttribute="leading" id="j7o-ef-ypc"/>
+                            <constraint firstItem="r3O-bL-qJR" firstAttribute="top" secondItem="NWb-Uv-nj6" secondAttribute="bottom" id="r1U-fH-u22"/>
+                            <constraint firstItem="NWb-Uv-nj6" firstAttribute="top" secondItem="ccf-hJ-ToU" secondAttribute="bottom" id="sNa-lb-DV9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rPi-1g-AzO"/>
                     </view>
                     <navigationItem key="navigationItem" id="hWT-cN-Mhn"/>
+                    <connections>
+                        <outlet property="miniPlayeContainerView" destination="r3O-bL-qJR" id="8Lp-fh-PJi"/>
+                        <outlet property="pageScrollView" destination="NWb-Uv-nj6" id="tSS-k6-mA6"/>
+                        <outlet property="searchView" destination="ccf-hJ-ToU" id="XVt-vr-fFW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP1-kG-Zu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

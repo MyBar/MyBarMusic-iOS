@@ -16,11 +16,11 @@ class MBLeftMenuViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        UIApplication.shared.statusBarStyle = .default
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        UIApplication.shared.statusBarStyle = .lightContent
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        UIApplication.shared.statusBarStyle = .default
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        UIApplication.shared.statusBarStyle = .lightContent
+//    }
 }
