@@ -11,13 +11,15 @@ import UIKit
 class MBMiniPlayerView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var nonePlaylistLabel: UILabel!
-    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var playView: UIView!
     @IBOutlet weak var playlistButton: UIButton!
     @IBOutlet weak var albumCoverScrollView: UIScrollView!
 
     var preMiniPlayerAlbumCoverView: MBMiniPlayerAlbumCoverView?
     var currentMiniPlayerAlbumCoverView: MBMiniPlayerAlbumCoverView?
     var nextMiniPlayerAlbumCoverView: MBMiniPlayerAlbumCoverView?
+
+    var playerCircularProgressView: MBPlayerCircularProgressView!
 
     convenience init() {
         self.init(frame: .zero)
@@ -43,8 +45,17 @@ class MBMiniPlayerView: UIView {
         self.addSubview(self.contentView)
 
         self.playlistButton.frame.size = CGSize(width: self.contentView.frame.height, height: self.contentView.frame.height)
-        self.playButton.frame.size = self.playlistButton.frame.size
-        self.albumCoverScrollView.frame.size = CGSize(width: self.contentView.frame.width - self.playlistButton.frame.width - self.playButton.frame.width, height: self.contentView.frame.height)
+        self.playView.frame.size = self.playlistButton.frame.size
+        self.albumCoverScrollView.frame.size = CGSize(width: self.contentView.frame.width - self.playlistButton.frame.width - self.playView.frame.width, height: self.contentView.frame.height)
+
+        let backColor = UIColor(patternImage: UIImage(named: "player_slider_playback_left")!) //UIColor(red: 236.0/255.0, green: 236.0/255.0, blue: 236.0/255.0, alpha: 1.0)
+        let progressColor = backColor //UIColor(red: 82.0/255.0, green: 135.0/255.0, blue: 237.0/255.0, alpha: 1.0)
+        var frame = CGRect(x: 0, y: 0, width: self.playView.bounds.width / 1.3, height: self.playView.bounds.height / 1.3)
+        frame.origin = CGPoint(x: (self.playView.bounds.width - frame.width) / 2.0, y: (self.playView.bounds.height - frame.height) / 2.0)
+        self.playerCircularProgressView = MBPlayerCircularProgressView(frame: frame, backColor: backColor, progressColor: progressColor, lineWidth: 3)
+        self.playerCircularProgressView.backgroundColor = UIColor(patternImage: UIImage(named: "vc_bg")!)
+        //self.playerCircularProgressView.isEnabled = false
+        self.playView.addSubview(self.playerCircularProgressView)
 
         initAlbumCoverScrollView()
     }

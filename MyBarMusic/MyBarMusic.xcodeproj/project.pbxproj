@@ -21,8 +21,10 @@
 		8DA724B7200F2DB200C0E170 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA724B6200F2DB200C0E170 /* Mine.storyboard */; };
 		8DA724B9200F2DCC00C0E170 /* Channel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA724B8200F2DCC00C0E170 /* Channel.storyboard */; };
 		8DA724BB200F2DE700C0E170 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA724BA200F2DE700C0E170 /* Discover.storyboard */; };
+		8DC3EFF02055125D00BCD32D /* MBSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3EFEF2055125D00BCD32D /* MBSegmentView.swift */; };
 		8DEB12302005EE7E00818DD3 /* MBMiniPlayerAlbumCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB122F2005EE7E00818DD3 /* MBMiniPlayerAlbumCoverView.swift */; };
 		8DEB12322005EE9300818DD3 /* MBMiniPlayerAlbumCoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEB12312005EE9300818DD3 /* MBMiniPlayerAlbumCoverView.xib */; };
+		8DF3D50C201C94AE0078C67F /* MBPlayerCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3D50B201C94AE0078C67F /* MBPlayerCircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +66,10 @@
 		8DA724B6200F2DB200C0E170 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		8DA724B8200F2DCC00C0E170 /* Channel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channel.storyboard; sourceTree = "<group>"; };
 		8DA724BA200F2DE700C0E170 /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		8DC3EFEF2055125D00BCD32D /* MBSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBSegmentView.swift; sourceTree = "<group>"; };
 		8DEB122F2005EE7E00818DD3 /* MBMiniPlayerAlbumCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBMiniPlayerAlbumCoverView.swift; sourceTree = "<group>"; };
 		8DEB12312005EE9300818DD3 /* MBMiniPlayerAlbumCoverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBMiniPlayerAlbumCoverView.xib; sourceTree = "<group>"; };
+		8DF3D50B201C94AE0078C67F /* MBPlayerCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlayerCircularProgressView.swift; sourceTree = "<group>"; };
 		B5E4F3455F62F57AD295911C /* Pods-MyBarMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBarMusic.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MyBarMusic/Pods-MyBarMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		C1EEA557B8A6E2013CC17A4E /* Pods_MyBarMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBarMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -392,6 +396,8 @@
 				8D459EE91FFB856E00612CBD /* MBMiniPlayerView.swift */,
 				8DEB12312005EE9300818DD3 /* MBMiniPlayerAlbumCoverView.xib */,
 				8DEB122F2005EE7E00818DD3 /* MBMiniPlayerAlbumCoverView.swift */,
+				8DF3D50B201C94AE0078C67F /* MBPlayerCircularProgressView.swift */,
+				8DC3EFEF2055125D00BCD32D /* MBSegmentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -670,9 +676,11 @@
 				8DEB12302005EE7E00818DD3 /* MBMiniPlayerAlbumCoverView.swift in Sources */,
 				8D459EED1FFB856E00612CBD /* MBSlideMenuController.swift in Sources */,
 				8D459EF01FFB856E00612CBD /* MBMiniPlayerView.swift in Sources */,
+				8DC3EFF02055125D00BCD32D /* MBSegmentView.swift in Sources */,
 				8D459E991FFB811300612CBD /* AppDelegate.swift in Sources */,
 				8D459EEE1FFB856E00612CBD /* MBMainViewController.swift in Sources */,
 				8D459EEC1FFB856E00612CBD /* MBLeftMenuViewController.swift in Sources */,
+				8DF3D50C201C94AE0078C67F /* MBPlayerCircularProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,8 +13,10 @@ class MBMainViewController: UIViewController {
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var miniPlayeContainerView: UIView!
     @IBOutlet weak var pageScrollView: UIScrollView!
-    
+
     var miniPlayerView: MBMiniPlayerView!
+
+    var titleSegmentView: MBSegmentView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,15 @@ class MBMainViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "vc_head_bg"), for: UIBarMetrics.default)
 
         self.addLeftBarButtonWithImage(UIImage(named: "navagation_btn_default")!.withRenderingMode(.alwaysOriginal))
+
+        self.addRightBarButtonWithImage(UIImage(named: "top_tab_more")!.withRenderingMode(.alwaysOriginal))
+
+        self.titleSegmentView = MBSegmentView(frame: CGRect(x: (UIScreen.main.bounds.width - 210.0) / 2.0, y: 0, width: 210, height: 44))
+        self.titleSegmentView.delegate = self
+        self.titleSegmentView.titleFont = UIFont.systemFont(ofSize: 20)
+        self.titleSegmentView.defaultSelectdIndex = 1
+        self.titleSegmentView.titleArray = ["我的", "音乐馆", "发现"]
+        self.navigationItem.titleView = self.titleSegmentView
     }
 
     func setSearchView() {
@@ -50,7 +61,7 @@ class MBMainViewController: UIViewController {
 
         let contentWidth = CGFloat(3) * self.pageScrollView.bounds.width
         self.pageScrollView.contentSize = CGSize(width: contentWidth, height: 0)
-        self.pageScrollView.contentOffset = CGPoint(x: self.pageScrollView.bounds.width, y: 0)
+        self.pageScrollView.contentOffset = CGPoint(x: self.pageScrollView.bounds.width * CGFloat(self.titleSegmentView.defaultSelectdIndex!), y: 0)
     }
 
     /** 添加子控制器 */
@@ -80,15 +91,27 @@ extension MBMainViewController: UIScrollViewDelegate {
 
         if index == 0 {
             scrollView.bounces = false
-            //SlideMenuOptions.leftBezelWidth = scrollView.bounds.width
+            SlideMenuOptions.leftBezelWidth = 16.0
         } else {
             scrollView.bounces = true
-            //SlideMenuOptions.leftBezelWidth = 0.0
+            SlideMenuOptions.leftBezelWidth = 0.0
         }
+
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MainViewScrollDidScroll"), object: index)
     }
 
     /** 滚动结束（手势导致） */
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         self.scrollViewDidEndScrollingAnimation(scrollView)
     }
+}
+
+extension MBMainViewController: MBSegmentViewDelegate {
+    func segmentView(_ segmentView: MBSegmentView, didSelectIndexAt index: Int) {
+        self.pageScrollView.contentOffset = CGPoint(x: self.pageScrollView.bounds.width * CGFloat(index), y: 0)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MainViewScrollDidScroll"), object: index)
+
+    }
+
+
 }

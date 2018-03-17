@@ -18,7 +18,7 @@ class MBSlideMenuController: SlideMenuController {
     override func awakeFromNib() {
         SlideMenuOptions.hideStatusBar = false
         SlideMenuOptions.leftViewWidth = UIScreen.main.bounds.width * 0.85
-        //SlideMenuOptions.leftBezelWidth = 0.0
+        SlideMenuOptions.leftBezelWidth = 0.0
         SlideMenuOptions.contentViewScale = 1.0
         SlideMenuOptions.contentViewDrag = true
         SlideMenuOptions.simultaneousGestureRecognizers = true
